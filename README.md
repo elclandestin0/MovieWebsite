@@ -1,2 +1,2 @@
 # MovieWebsite
-A compilation of sample movies' trailer, name and description
+A compilation of sample movies' trailer, names and description
