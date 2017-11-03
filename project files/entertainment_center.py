@@ -36,33 +36,51 @@ spirited_away = media.Movie("",
                             "https://www.youtube.com/watch?v=ByXuk9QqQkk",
                             "",
                             "")
-
+fight_club = media.Movie("",
+                         "https://www.youtube.com/watch?v=SUXWAEX2jlg",
+                         "",
+                         "")
+the_departed = media.Movie("",
+                           "https://www.youtube.com/watch?v=iojhqm0JTW4",
+                           "",
+                           "")
+jurassic_park = media.Movie("",
+                           "https://www.youtube.com/watch?v=lc0UehYemQA&t=66s",
+                           "",
+                           "")
 movies = [toy_story,
           avatar,
           la_haine,
           reservoir_dogs,
           the_dark_knight,
-          spirited_away]
+          spirited_away,
+          fight_club,
+          the_departed,
+          jurassic_park
+          ]
 
 movies_search_string = ['Toy Story',
                         'Avatar',
                         'La Haine',
                         'Reservoir Dogs',
                         'The Dark Knight',
-                        'Spirited Away']
+                        'Spirited Away',
+                        'Fight Club',
+                        'The Departed',
+                        'Jurassic Park']
 
-def populate_data():
-    for m in range(6):
+def populate_data(moviesList):
+    for m in range(len(moviesList)):
         search = tmdb.Search()
         response = search.movie(query = movies_search_string[m])
         for s in search.results:
-            movies[m].title = s['title']
-            movies[m].storyline = s['overview']
-            movies[m].poster_image_url = "https://image.tmdb.org/t/p/w500" + s['poster_path']
+            moviesList[m].title = s['title']
+            moviesList[m].storyline = s['overview']
+            moviesList[m].poster_image_url = "https://image.tmdb.org/t/p/w500" + s['poster_path']
             break
 
 
 
-populate_data()
+populate_data(movies)
 
 fresh_tomatoes.open_movies_page(movies)
