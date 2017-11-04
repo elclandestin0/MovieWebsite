@@ -1,4 +1,5 @@
-## Code written  by: Memo Khoury
+# Code written by: Memo Khoury, under the guidance of the Udacity team
+# Modules used: webbrowser
 # Start date: 11/01/2017
 # Last modified: 11/03/2017
 
