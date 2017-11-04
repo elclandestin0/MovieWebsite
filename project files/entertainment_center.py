@@ -69,7 +69,7 @@ movies = [toy_story,
           ]
 
 movies_search_string = ['Toy Story',
-                        'Memo',
+                        'Avatar',
                         'La Haine',
                         'Reservoir Dogs',
                         'The Dark Knight',
