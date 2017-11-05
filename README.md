@@ -19,5 +19,4 @@ the search strings are confident queries. Sometimes if the search doesn't work,
 then <b> s['poster_path'] </b> comes out as a NoneType object. This gives you
 a run-time error as a NoneType object cannot be concatenated with a str type 
 object
-
-<b> END NOTE </b> 
+ 
