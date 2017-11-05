@@ -1,2 +1,3 @@
 # MovieWebsite
-A compilation of sample movies' trailer, names and description
+A compilation of my favourite movies' trailers, names and descriptions.
+
