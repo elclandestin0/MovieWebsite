@@ -105,14 +105,14 @@ def populate_data(movies_list):
     # above. The loop breaks after the first search because it is the
     # most confident item in the query.
 
-    for m in range(len(movies_list)):
+    tmdb_poster_directory = "https://image.tmdb.org/t/p/w500"
+    for m in range(len(movies)):
         search = tmdb.Search()
         response = search.movie(query=movies_search_string[m])
         for s in search.results:
-            poster_path = s['poster_path']
-            movies_list[m].title = s['title']
-            movies_list[m].storyline = s['overview']
-            movies_list[m].poster_url = "https://image.tmdb.org/t/p/w500" + s['poster_path']
+            movies[m].title = s['title']
+            movies[m].storyline = s['overview']
+            movies[m].poster_url = tmdb_poster_directory + s['poster_path']
             print(s['poster_path'])
             break
 
