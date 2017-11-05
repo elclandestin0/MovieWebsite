@@ -79,7 +79,7 @@ movies_search_string = ['Toy Story',
                         'Spirited Away',
                         'Fight Club',
                         'The Departed',
-                        'Jurassic Park']
+                        'Predestination']
 
 
 def populate_data(movies_list):
@@ -109,9 +109,11 @@ def populate_data(movies_list):
         search = tmdb.Search()
         response = search.movie(query=movies_search_string[m])
         for s in search.results:
+            poster_path = s['poster_path']
             movies_list[m].title = s['title']
             movies_list[m].storyline = s['overview']
             movies_list[m].poster_url = "https://image.tmdb.org/t/p/w500" + s['poster_path']
+            print(s['poster_path'])
             break
 
 populate_data(movies)

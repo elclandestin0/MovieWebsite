@@ -9,4 +9,15 @@ entertainment_center.py, simply change the elements in the
 movie_search_string array. Note that the algorithm works by taking
 the most confident search term (the first one) in The Movie Database.
 
-If you have any questions, do not hesitate to contact me. 
+If you have questions, do not hesitate to contact me.
+
+
+
+<b> NOTE:<b>
+If you would like to play with the populate_data() algorithm, make sure that 
+the search strings are confident queries. Sometimes if the search doesn't work,
+then <b> s['poster_path'] </b> comes out as a NoneType object. This gives you
+a run-time error as a NoneType object cannot be concatenated with a str type 
+object
+
+<b> END NOTE </b> 
