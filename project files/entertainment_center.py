@@ -16,59 +16,50 @@ import tmdbsimple as tmdb
 
 tmdb.API_KEY = '4a3e0dba52dfa69ee42550261e86155f'
 
-toy_story =
-media.Movie("",
-            "https://www.youtube.com/watch?v=KYz2wyBy3kc",
-            "",
-            "")
-avatar =
-media.Movie("",
-            "https://www.youtube.com/watch?v=d1_JBMrrYw8",
-            "",
-            "")
+toy_story = media.Movie("",
+                        "https://www.youtube.com/watch?v=KYz2wyBy3kc",
+                        "",
+                        "")
+avatar = media.Movie("",
+                     "https://www.youtube.com/watch?v=d1_JBMrrYw8",
+                     "",
+                     "")
 
-la_haine =
-media.Movie("",
-            "https://www.youtube.com/watch?v=cy5TaO6qTBU",
-            "",
-            "")
+la_haine = media.Movie("",
+                       "https://www.youtube.com/watch?v=cy5TaO6qTBU",
+                       "",
+                       "")
 
-reservoir_dogs =
-media.Movie("",
-            "https://www.youtube.com/watch?v=vayksn4Y93A",
-            "",
-            "")
+reservoir_dogs = media.Movie("",
+                             "https://www.youtube.com/watch?v=vayksn4Y93A",
+                             "",
+                             "")
 
-the_dark_knight =
-media.Movie("",
-            "https://www.youtube.com/watch?v=EXeTwQWrcwY",
-            "",
-            "")
+the_dark_knight = media.Movie("",
+                              "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+                              "",
+                              "")
 
 
-spirited_away =
-media.Movie("",
-            "https://www.youtube.com/watch?v=ByXuk9QqQkk",
-            "",
-            "")
+spirited_away = media.Movie("",
+                            "https://www.youtube.com/watch?v=ByXuk9QqQkk",
+                            "",
+                            "")
 
-fight_club =
-media.Movie("",
-            "https://www.youtube.com/watch?v=SUXWAEX2jlg",
-            "",
-            "")
+fight_club = media.Movie("",
+                         "https://www.youtube.com/watch?v=SUXWAEX2jlg",
+                         "",
+                         "")
 
-the_departed =
-media.Movie("",
-            "https://www.youtube.com/watch?v=iojhqm0JTW4",
-            "",
-            "")
+the_departed = media.Movie("",
+                           "https://www.youtube.com/watch?v=iojhqm0JTW4",
+                           "",
+                           "")
 
-jurassic_park =
-media.Movie("",
-            "https://www.youtube.com/watch?v=lc0UehYemQA&t=66s",
-            "",
-            "")
+jurassic_park = media.Movie("",
+                            "https://www.youtube.com/watch?v=lc0UehYemQA&",
+                            "",
+                            "")
 
 movies = [toy_story,
           avatar,
@@ -78,8 +69,7 @@ movies = [toy_story,
           spirited_away,
           fight_club,
           the_departed,
-          jurassic_park
-          ]
+          jurassic_park]
 
 movies_search_string = ['Toy Story',
                         'Avatar',
@@ -121,8 +111,7 @@ def populate_data(movies_list):
         for s in search.results:
             movies_list[m].title = s['title']
             movies_list[m].storyline = s['overview']
-            movies_list[m].poster_image_url =
-            "https://image.tmdb.org/t/p/w500" + s['poster_path']
+            movies_list[m].poster_url = "https://image.tmdb.org/t/p/w500" + s['poster_path']
             break
 
 populate_data(movies)
