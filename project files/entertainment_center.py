@@ -113,7 +113,6 @@ def populate_data(movies_list):
             movies[m].title = s['title']
             movies[m].storyline = s['overview']
             movies[m].poster_url = tmdb_poster_directory + s['poster_path']
-            print(s['poster_path'])
             break
 
 populate_data(movies)
